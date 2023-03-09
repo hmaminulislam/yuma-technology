@@ -1,21 +1,24 @@
+function showNav(data) {
+  const searchBar = document.getElementById("search");
+  const restaurantFoodMenu = document.getElementById("restaurant-food-menu");
+  const restaurantFoodMenuMb = document.getElementById("restaurant-mb-menu");
 
-function showNav (data) {
+  if (data === "close") {
+    searchBar.classList.remove("d-none");
+    restaurantFoodMenu.classList.remove("d-none");
+    restaurantFoodMenuMb.classList.remove("d-none");
+  }
 
-    const searchBar = document.getElementById("search");
-    const restaurantFoodMenu = document.getElementById("restaurant-food-menu");
-    const restaurantFoodMenuMb = document.getElementById("restaurant-mb-menu");
-    document
-      .getElementsByClassName("mobile-menu-wrapper")[0]
-      .classList.toggle("mobile-menu-active");
+  document
+    .getElementsByClassName("mobile-menu-wrapper")[0]
+    .classList.toggle("mobile-menu-active");
+  const myTimeout = setTimeout(myGreeting, 2000);
   
-    if(data === "open") {
-        searchBar.classList.add("d-none")
-        restaurantFoodMenu.classList.add("d-none")
-        restaurantFoodMenuMb.classList.add("d-none")
-    }
-    if(data === "close") {
-        searchBar.classList.remove("d-none")
-        restaurantFoodMenu.classList.remove("d-none")
-        restaurantFoodMenuMb.classList.remove("d-none")
-    }
+  myTimeout();
+
+  if (data === "open") {
+    searchBar.classList.add("d-none");
+    restaurantFoodMenu.classList.add("d-none");
+    restaurantFoodMenuMb.classList.add("d-none");
+  }
 }
