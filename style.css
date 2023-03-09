@@ -13,7 +13,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 55px 70px;
 }
 .logo {
     max-width: 250px;
@@ -125,8 +124,12 @@ a.active {
     font-size: 22px;
     color: #fff;
     border-radius: 7px;
-    padding: 8px;
+    max-width: 40px;
+    height: 50px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .menu-content-sub-des {
     border-bottom: 2px solid #b9b9b9;
@@ -161,11 +164,13 @@ a.active {
     top: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
-    text-align: center;
     padding: 0;
+    width: 80%;
 }
 .mobile-menu li {
     margin: 15px 0;
+    border-bottom: 1px solid #5a5a5a;
+    display: block;
 }
 .mobile-menu li a {
     position: relative;
@@ -184,6 +189,30 @@ a.active {
     color: #fff;
     font-size: 35px;
     cursor: pointer;
+}
+/* Accordion Mobile */
+.accordion-body {
+    padding: 16px 0 !important;
+}
+.menu-content-box-mb {
+    border-bottom: 1px solid #b9b9b9;
+    padding: 5px 0;
+    margin: 0 !important;
+}
+.accordion-item {
+    border-top: 2px solid #333333 !important;
+}
+.accordion-button:not(.collapsed) {
+    color: #000000 !important;
+    background-color: #fff !important;
+}
+.accordion-button:focus {
+    box-shadow: none !important;
+    border-bottom: 2px solid #333333 !important;
+}
+.accordion-button {
+    box-shadow: none !important;
+    border-bottom: none !important;
 }
 /* Your Order */
 .delivery-container {
