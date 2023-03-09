@@ -14,46 +14,72 @@
 </head>
 <body>
     <!-- Header -->
-    <div id="header" class="container-fluid mx-auto row align-items-center">
-        <div class="col">
+    <div id="header" class="mx-auto row justify-content-between align-items-center">
+        <div class="col-auto">
             <img class="logo" src="/img/image.webp" alt="">
         </div>
-        <div class="col">
-            <div class="">
-                <i class="fa-regular fa-user text-white me-1"></i>
-                <a href="#" class="text-white text-decoration-none">Sign In / Register</a>
-            </div>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="col d-flex justify-content-end">
+            <div class="d-none d-lg-block">
+                <div class="d-flex justify-content-end mb-3">
+                    <i class="fa-regular fa-user text-white me-1"></i>
+                    <a href="#" class="text-white text-decoration-none">Sign In / Register</a>
+                </div>
+                <nav class="navbar navbar-expand-lg">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="menu-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                            <a class="menu-link" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
+                            <a class="menu-link menu-link-active" href="#">Menu</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link">Book a Table</a>
+                            <a class="menu-link" href="#">Book a Table</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link">Reviews</a>
+                            <a class="menu-link" href="#">Reviews</a>
                         </li>
                     </ul>
-                    </div>
+                </nav>
+            </div>
+            <!-- Mobile Navbar -->
+            <div>
+                <div class="d-block d-lg-none">
+                    <i onclick="showNav()" class="fa-solid fa-bars mobile-bars-icon"></i>
                 </div>
-            </nav>
+                <nav class="mobile-menu-wrapper d-none">
+                    <div class="mobile-close-icon">
+                        <i onclick="showNav()" class="fa-solid fa-xmark"></i>
+                    </div>
+                    <ul class="mobile-menu">
+                        <li>
+                            <a href="#">Sign In | Register</a>
+                        </li>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#">Book a Table</a>
+                        </li>
+                        <li>
+                            <a href="#">Reviews</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
     <!-- Search -->
-    <div class="row container-fluid d-block sticky-top mx-auto">
-        <div class="col d-none d-sm-block"></div>
+    <div class="row container-fluid d-block sticky-top mx-sm-auto mx-end restaurnat-menus">
+        <div class="col"></div>
         <div class="col-md-6 col-sm-8 text-center py-2 px-0 bg-white mx-auto d-flex align-items-center">
             <input type="text" placeholder="Search Menu For.." class="w-100 search-input">
             <span class="search-icon">
@@ -63,34 +89,34 @@
         <div class="col d-none d-md-block"></div>
     </div>
     <!-- Menu -->
-    <div class="">
-        <div class="row container-fluid mx-auto">
+    <div>
+        <div class="row container-fluid mx-auto restaurnat-menus">
             <div class="col d-none d-sm-block">
-                <div class="sticky-top">
+                <div class="sidebar-sticky">
                     <h3 class="menu-heading">Menu Categories</h3>
-                    <div>
+                    <nav class="main-nav">
                         <ul class="menu-list-container">
-                            <li class="menu-list">Traditional Starters</li>
-                            <li class="menu-list">Chatt Massala Starters</li>
-                            <li class="menu-list">Puri Starters</li>
-                            <li class="menu-list">Tandoori Starters</li>
-                            <li class="menu-list">From The Tandoori Clay Oven</li>
-                            <li class="menu-list">Our Biryanis</li>
-                            <li class="menu-list">Signature Dishes</li>
-                            <li class="menu-list">Our Baltis</li>
-                            <li class="menu-list">Old Traditional Favourites</li>
-                            <li class="menu-list">Side Dishes</li>
-                            <li class="menu-list">Sundries</li>
-                            <li class="menu-list">Set Meals</li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu1">Traditional Starters</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu2">Chatt Massala Starters</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu3">Puri Starters</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu4">Tandoori Starters</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu5">From The Tandoori Clay Oven</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu6">Our Biryanis</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu7">Signature Dishes</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu8">Our Baltis</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu9">Old Traditional Favourites</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu10">Side Dishes</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu11">Sundries</a></li>
+                            <li class="menu-list"><a class="scroll" href="#sideMenu12">Set Meals</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </div>
-            <div class="col-md-6 border col-sm-8 menu-contens ">
+            <div class="col-md-6 border col-sm-8 menu-contens mb-3">
                 <!-- Menu contens Traditional Starters -->
-                <div class="">
-                    <h4 class="menu-heading">Traditional Starters</h4>
-                    <div  class="row align-items-center menu-content-box">
+                <div id="sideMenu1">
+                    <h4 class="menu-heading sticky-top-heading">Traditional Starters</h4>
+                    <div class="row align-items-center menu-content-box">
                         <div class="col-7">
                             <h5 class="menu-content-title">Combo Share Starter</h5>
                             <p class="menu-content-des">Mixture Of Starters For 2 People. Onion Bhajee, Samosa And Hot Wings</p>
@@ -114,8 +140,8 @@
                     </div>
                 </div>
                 <!-- Menu contents Chatt Massala Starters -->
-                <div class="">
-                    <h4 class="menu-heading">Chatt Massala Starters</h4>
+                <div id="sideMenu2" class="">
+                    <h4 class="menu-heading sticky-top-heading">Chatt Massala Starters</h4>
                     <p class="px-3 menu-content-sub-des">Chatt massala is a special spice made mainly out of dried mango powder. we find it extremely tasty, and incorporate it with our own selection of herbs. served with salad and mint yogurt dressing.</p>
                     <div  class="row align-items-center menu-content-box">
                         <div class="col-7">
@@ -140,13 +166,40 @@
                         </p>
                     </div>
                 </div>
-                <!-- Menu contents Chatt Massala Starters -->
-                <div class="">
-                    <h4 class="menu-heading">Chatt Massala Starters</h4>
-                    <p class="px-3 menu-content-sub-des">Chatt massala is a special spice made mainly out of dried mango powder. we find it extremely tasty, and incorporate it with our own selection of herbs. served with salad and mint yogurt dressing.</p>
+                <!-- Menu contents Puri Starters -->
+                <div id="sideMenu3">
+                    <h4 class="menu-heading sticky-top-heading">Puri Starters</h4>
+                    <p class="px-3 menu-content-sub-des">A puri is a light piece of fried bread. these starters come with either; king prawn, prawn, chicken tikka, or vegetables, cooked in a selection of herbs and spices, in a thick sauce reduction served on “puri” bread. served with salad and mint yogurt dressing</p>
                     <div  class="row align-items-center menu-content-box">
                         <div class="col-7">
-                            <h5 class="menu-content-title">Chicken Chatt</h5>
+                            <h5 class="menu-content-title">King Prawn Puri</h5>
+                            <p class="menu-content-des"></p>
+                        </div>
+                        <p class="col-2 menu-content-des"></p>
+                        <p class="col-2 menu-content-price">£7.00</p>
+                        <p class="col-1 menu-content-plus-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </p>
+                    </div>
+                    <div  class="row align-items-center menu-content-box menu-content-bg">
+                        <div class="col-7">
+                            <h5 class="menu-content-title">Daakshin Puri</h5>
+                            <p class="menu-content-des">Spicy, Shredded, Smokey Lamb</p>
+                        </div>
+                        <p class="col-2 menu-content-des"></p>
+                        <p class="col-2 menu-content-price">£6.50</p>
+                        <p class="col-1 menu-content-plus-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </p>
+                    </div>
+                </div>
+                <!-- Menu contents Tandoori Starters -->
+                <div id="sideMenu4">
+                    <h4 class="menu-heading sticky-top-heading">Tandoori Starters</h4>
+                    <p class="px-3 menu-content-sub-des">These starters are seasoned in a blend of mild herbs and spices and roasted on skewers in the authentic clay tandoori oven, served with salad and mint yogurt dressing</p>
+                    <div  class="row align-items-center menu-content-box">
+                        <div class="col-7">
+                            <h5 class="menu-content-title">Tandoori Chicken Starter</h5>
                             <p class="menu-content-des"></p>
                         </div>
                         <p class="col-2 menu-content-des"></p>
@@ -157,24 +210,98 @@
                     </div>
                     <div  class="row align-items-center menu-content-box menu-content-bg">
                         <div class="col-7">
-                            <h5 class="menu-content-title">Chicken Tikka Chatt</h5>
-                            <p class="menu-content-des"></p>
+                            <h5 class="menu-content-title">Tandoori King Prawns Starter</h5>
+                            <p class="menu-content-des">King Prawn Lovers Paradise, Our Take Is Slightly Different To Other Indian Restaurants.</p>
                         </div>
                         <p class="col-2 menu-content-des"></p>
-                        <p class="col-2 menu-content-price">£5.50</p>
+                        <p class="col-2 menu-content-price">£7.00</p>
+                        <p class="col-1 menu-content-plus-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </p>
+                    </div>
+                </div>
+                <!-- Menu contents From The Tandoori Clay Oven -->
+                <div id="sideMenu5">
+                    <h4 class="menu-heading sticky-top-heading">From The Tandoori Clay Oven</h4>
+                    <p class="px-3 menu-content-sub-des">These dishes are marinated in our own blend of mild herbs and spices. traditional starters roasted in the clay oven to order. served with salad and mint yogurt dressing.</p>
+                    <div  class="row align-items-center menu-content-box">
+                        <div class="col-7">
+                            <h5 class="menu-content-title">Tandoori Chicken Main</h5>
+                            <p class="menu-content-des">Half</p>
+                        </div>
+                        <p class="col-2 menu-content-des"></p>
+                        <p class="col-2 menu-content-price">£8.50</p>
+                        <p class="col-1 menu-content-plus-icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </p>
+                    </div>
+                    <div  class="row align-items-center menu-content-box menu-content-bg">
+                        <div class="col-7">
+                            <h5 class="menu-content-title">Tandoori Mixed Grill</h5>
+                            <p class="menu-content-des">Mixture Of Chicken And Lamb Tikka, Sheek Kebab, Tandoori Chicken, Served With Naan Bread</p>
+                        </div>
+                        <p class="col-2 menu-content-des"></p>
+                        <p class="col-2 menu-content-price">£12.50</p>
                         <p class="col-1 menu-content-plus-icon">
                             <i class="fa-solid fa-plus"></i>
                         </p>
                     </div>
                 </div>
             </div>
+            <!-- Your Order -->
             <div class="col d-none d-md-block">
-                 <div class="sticky-top">
-                <h3 class="menu-heading">Your Order</h3>
-            </div>
+                 <div class="sidebar-sticky mb-4">
+                    <div class="border">
+                        <h3 class="menu-heading">Your Order</h3>
+                        <div class="d-flex align-items-center justify-content-between delivery-container px-2">
+                            <div class="d-flex align-items-center delivery-box">
+                                <i class="fas fa-motorcycle order-icon"></i>
+                                <div class="d-flex flex-column">
+                                    <span class="delivery-text">Delivery</span>
+                                    <span class="delivery-date">From 18:15</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center px-3">
+                                <i class="fas fa-shopping-bag shopping-icon"></i>
+                                <div class="d-flex flex-column">
+                                    <span class="collection-text">Collection</span>
+                                    <span class="collection-date">From 18:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between py-3 px-2">
+                            <i class="fas fa-map-marker-alt location-icon"></i>
+                            <span class="delivery-from-text">Delivery From £2.00</span>
+                            <ul class="mb-0"><li class="delivery-from-text">Min. Order £15.00</li></ul>
+                            <i class="fas fa-info"></i>
+                        </div>
+                        <div class="basket">
+                            <p class="text-center">Your basket is empty!</p>
+                        </div>
+                        <div class="total-price-box">
+                            <div class="d-flex justify-content-between">
+                                <span class="sub-total">Sub Total</span>
+                                <span class="sub-total-price">£0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mt-3">
+                                <span class="total">Total</span>
+                                <span class="total-price">£0.00</span>
+                            </div>     
+                        </div>
+                        <div class="d-flex justify-content-center delivery-btn">
+                            <i class="fas fa-motorcycle me-2 delivery-btn-icon"></i>
+                            <span class="text-white">Spend another £15.00 for Delivery.</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center allergy">
+                        <i class="fa fa-info-circle me-2"></i>
+                        <span>Allergy information</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Footer -->
     <footer class="footer pb-1">
         <div class="pt-4 container">
             <div class="footer-hr"></div>
@@ -237,6 +364,29 @@
     </footer>
     <!-- Bootstrap js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <!-- Main js -->
+    <script src="js/main.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="jquery/onepageNav.js"></script>
+	<script type="text/javascript">
+		jQuery('.scroll').onePgaeNav({
+			wrapper : '#onepage-nav'
+		});
+	</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
 </body>
 </html>

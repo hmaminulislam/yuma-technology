@@ -18,9 +18,26 @@
 .logo {
     max-width: 250px;
 }
-.nav-link {
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.menu-link {
     font-size: 22px !important;
     color: #fff !important;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+.menu-link-active::after {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    background-color: #000000;
+    width: 100%;
+    height: 2px;
 }
 /* Search */
 .search-input {
@@ -34,11 +51,15 @@
     cursor: pointer;
 }
 /* Menu */
-.restaurant {
-    margin-top: 60px !important;
+.restaurnat-menus {
+    padding: 0 !important;
 }
 .menu-contens {
     padding: 0 !important;
+}
+.sidebar-sticky {
+    position: sticky;
+    top: 10px;
 }
 .menu-heading {
     font-size: 20px;
@@ -46,16 +67,40 @@
     background-color: #909090;
     padding: 14px 10px;
 }
+.sticky-top-heading {
+    position: sticky;
+    top: 60px;
+}
 .menu-list-container {
     list-style: none;
     padding: 0;
 }
-.menu-list {
+.menu-list a {
     border-bottom: 1px solid #e4e4e4;
     padding: 12px 5px;
     font-size: 10pt;
     font-weight: 400;
     color: #686767;
+    cursor: pointer;
+    display: block;
+}
+a.active {
+    background-color: #BEBCBD;
+    color: #fff !important;
+    transition: .1s linear;
+    transition-delay: .4s;
+}
+.menu-list:hover a {
+    font-size: 14px;
+    color: #000000;
+}
+.menu-list a {
+    text-decoration: none;
+    color: #686767;
+}
+.menu-list-container li.current a {
+    background-color: red !important;
+    color: #37B98A;
 }
 .menu-content-box {
     border-bottom: 2px solid #b9b9b9;
@@ -89,6 +134,147 @@
 }
 .menu-content-bg {
     background-color: #EDF3F7;
+}
+
+/* Mobile Navbar */
+.mobile-bars-icon {
+    color: #fff;
+    background-color: #000000;
+    padding: 5px 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.mobile-bars-icon:hover {
+    color: #909090;
+}
+.mobile-menu-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1C1C1C;
+}
+.mobile-menu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.mobile-menu li {
+    margin: 15px 0;
+}
+.mobile-menu li a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 200;
+}
+.mobile-close-icon {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.mobile-close-icon i {
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+/* Your Order */
+.delivery-container {
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    padding: 7px 0;
+}
+.delivery-box {
+    background-color: #909090;
+    border-radius: 30px;
+    padding: 10px 24px;
+}
+.order-icon {
+    font-size: 30px;
+    color: #fff;
+    margin-right: 12px;
+}
+.shopping-icon {
+    font-size: 30px;
+    color: #000000;
+    margin-right: 12px;
+}
+.delivery-text {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 0px;
+}
+.delivery-date {
+    font-size: 10px;
+    color: #fff;
+}
+.collection-text {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 0px;
+}
+.collection-date {
+    font-size: 10px;
+    color: #000000;
+}
+.location-icon {
+    color: #F7713E;
+}
+.delivery-from-text {
+    font-size: 13px;
+}
+.basket {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+.basket p {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+.total-price-box {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+.sub-total {
+    font-size: 14px;
+}
+.sub-total-price {
+    font-size: 10px;
+}
+.total {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.total-price {
+    font-size: 18px;
+    font-weight: 70
+}
+.delivery-btn {
+    background-color: #cccccc;
+    padding: 12px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+.delivery-btn-icon {
+    color: #fff;
+    font-size: 24px;
+}
+.allergy {
+    margin: 10px 0 20px;
+}
+.allergy i , .allergy span{
+    color: #37B98A;
 }
 
 /* Footer */
