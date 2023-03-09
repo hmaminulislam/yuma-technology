@@ -1,8 +1,12 @@
+
 function showNav (data) {
 
     const searchBar = document.getElementById("search");
     const restaurantFoodMenu = document.getElementById("restaurant-food-menu");
     const restaurantFoodMenuMb = document.getElementById("restaurant-mb-menu");
+    document
+      .getElementsByClassName("mobile-menu-wrapper")[0]
+      .classList.toggle("mobile-menu-active");
   
     if(data === "open") {
         searchBar.classList.add("d-none")
@@ -14,6 +18,4 @@ function showNav (data) {
         restaurantFoodMenu.classList.remove("d-none")
         restaurantFoodMenuMb.classList.remove("d-none")
     }
-
-    document.getElementsByClassName("mobile-menu-wrapper")[0].classList.toggle("d-none")
 }

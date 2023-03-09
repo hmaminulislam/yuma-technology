@@ -9,13 +9,13 @@
     font-family: 'Roboto', sans-serif;
 }
 #header {
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.459)), url("/img/header-bg.jpg");
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.459)), url("img/header-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .logo {
-    max-width: 250px;
+    max-width: 240px;
 }
 .navbar-nav {
     display: flex;
@@ -135,6 +135,9 @@ a.active {
     border-bottom: 2px solid #b9b9b9;
     padding: 8px;
 }
+.menu-content-sub-mb {
+    padding: 8px;
+}
 .menu-content-bg {
     background-color: #EDF3F7;
 }
@@ -152,11 +155,24 @@ a.active {
 }
 .mobile-menu-wrapper {
     position: fixed;
-    left: 0;
+    right: -950px;
+    opacity: 0;
     top: 0;
     height: 100vh;
     width: 100vw;
     background-color: #1C1C1C;
+    transition: .4s ease-in;
+}
+.mobile-menu-active {
+    position: fixed;
+    right: 0px;
+    opacity: 1;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1C1C1C;
+    display: block;
+    transition: .4s ease-in;
 }
 .mobile-menu {
     position: absolute;
@@ -195,24 +211,35 @@ a.active {
     padding: 16px 0 !important;
 }
 .menu-content-box-mb {
-    border-bottom: 1px solid #b9b9b9;
     padding: 5px 0;
     margin: 0 !important;
 }
 .accordion-item {
     border-top: 2px solid #333333 !important;
 }
+.accrodion-border {
+    border-bottom: 2px solid #333333 !important;
+}
+
+.accor-heading-last {
+    border-bottom: 2px solid #333333 !important;
+}
 .accordion-button:not(.collapsed) {
     color: #000000 !important;
     background-color: #fff !important;
 }
-.accordion-button:focus {
-    box-shadow: none !important;
-    border-bottom: 2px solid #333333 !important;
+.accordion-body-container {
+     border-top: 2px solid #333333 !important;
+     margin-top: -10px;
+     margin-bottom: 20px;
 }
 .accordion-button {
     box-shadow: none !important;
     border-bottom: none !important;
+}
+.accordion-header {
+    color: #000000;
+    font-weight: 700 !important;
 }
 /* Your Order */
 .delivery-container {
@@ -339,4 +366,7 @@ a.active {
     font-size: 10px;
     text-align: center;
     color: #fff;
+}
+.footer-nav {
+    list-style: none;
 }
