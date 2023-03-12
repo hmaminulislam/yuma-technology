@@ -133,15 +133,20 @@ a.active {
 }
 .menu-content-sub-des {
     border-bottom: 2px solid #b9b9b9;
-    padding: 8px;
+    padding: 12px 8px;
 }
 .menu-content-sub-mb {
-    padding: 8px;
+    padding: 10px;
+    font-size: 13px;
 }
 .menu-content-bg {
     background-color: #EDF3F7;
 }
-
+.sign-in {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* Mobile Navbar */
 .mobile-bars-icon {
     color: #fff;
@@ -209,15 +214,21 @@ a.active {
     cursor: pointer;
 }
 /* Accordion Mobile */
+#restaurant-mb-menu {
+    padding: 0 8px 8px 8px;
+}
 .accordion-body {
     padding: 16px 0 !important;
 }
 .menu-content-box-mb {
-    padding: 5px 0;
+    padding: 5px 0 5px 8px;
     margin: 0 !important;
 }
 .accordion-item {
     border-top: 2px solid #333333 !important;
+}
+.accordion-flush .accordion-item {
+    box-shadow: 1px 1px 4px black;
 }
 .accrodion-border {
     border-bottom: 2px solid #333333 !important;
@@ -230,10 +241,12 @@ a.active {
     color: #000000 !important;
     background-color: #fff !important;
 }
+.accordion-body-mb {
+    padding-bottom: 0 !important;
+}
 .accordion-body-container {
      border-top: 2px solid #333333 !important;
      margin-top: -10px;
-     margin-bottom: 20px;
 }
 .accordion-button {
     box-shadow: none !important;
@@ -243,7 +256,37 @@ a.active {
     color: #000000;
     font-weight: 700 !important;
 }
+.menu-content-title-mb {
+    font-size: 14px;
+    color: #000000;
+    padding: 0;
+}
+.menu-content-des-mb {
+    font-size: 12px;
+    color: #444444;
+    padding: 0 !important;
+}
+.menu-content-price-mb {
+    font-size: 13px;
+    color: #000000;
+    font-weight: 700;
+}
+.menu-name {
+    padding: 5px 0 !important;
+}
+.menu-content-plus-icon-mb i {
+    background-color: #37B98A;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.menu-name-content {
+    padding: 0 !important;
+}
 /* Your Order */
+.order-contnet {
+    z-index: 99999999;
+}
 .delivery-container {
     background-color: #EEEEEE;
     border-radius: 30px;
@@ -371,4 +414,86 @@ a.active {
 }
 .footer-nav {
     list-style: none;
+}
+
+/* Cart and Scroll  */
+.cart-scroll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+.cart-btn {
+    background-color: #37B98A;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.scroll-icon-mb {
+    background-color: #F9AC2D;
+    width: 56px;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.scroll-icon-mb i {
+    font-size: 24px;
+}
+.scroll-icon-contianer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99999999;
+}
+.scroll-icon {
+    background-color: #F9AC2D;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.scroll-icon i {
+    font-size: 24px;
+}
+/* Responsive */
+
+@media screen and (max-width: 576px) {
+    #search {
+        z-index: 999 !important;
+        background-color: #fff !important;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    .cart-scroll {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .footer {
+        margin-bottom: 58px;
+    }
+    .scroll-icon-contianer {
+        display: none;
+    }
 }
